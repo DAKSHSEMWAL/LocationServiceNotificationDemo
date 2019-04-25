@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Daksh\\AndroidStudioProjects\\LocationServiceNotificationDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "D:\\AndroidStudioProjects\\LocationServiceNotificationDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Daksh\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-28.0.0.aar\\84ff3f80cd7ba5088b794d8ee9a86e5c\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Daksh\\.gradle\\caches\\transforms-2\\files-2.1\\fb2502d1f7dbeddb025644cd225d79e4\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Daksh\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\b94020d7744e19b98bca489f74c37263\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\Daksh\\.gradle\\caches\\transforms-2\\files-2.1\\f194b0673da0d7c9f0d0f2e11822e789\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",

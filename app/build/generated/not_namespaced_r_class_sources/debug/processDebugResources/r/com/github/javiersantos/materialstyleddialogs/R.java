@@ -910,17 +910,17 @@ public final class R {
         public static final int abc_shareactionprovider_share_with = 0x7f0d0024;
         public static final int abc_shareactionprovider_share_with_application = 0x7f0d0025;
         public static final int abc_toolbar_collapse_description = 0x7f0d0026;
-        public static final int define_materialstyleddialogs = 0x7f0d003e;
-        public static final int library_materialstyleddialogs_author = 0x7f0d0044;
-        public static final int library_materialstyleddialogs_authorWebsite = 0x7f0d0045;
-        public static final int library_materialstyleddialogs_isOpenSource = 0x7f0d0046;
-        public static final int library_materialstyleddialogs_libraryDescription = 0x7f0d0047;
-        public static final int library_materialstyleddialogs_libraryName = 0x7f0d0048;
-        public static final int library_materialstyleddialogs_libraryWebsite = 0x7f0d0049;
-        public static final int library_materialstyleddialogs_licenseId = 0x7f0d004a;
-        public static final int library_materialstyleddialogs_repositoryLink = 0x7f0d004b;
-        public static final int search_menu_title = 0x7f0d005c;
-        public static final int status_bar_notification_info_overflow = 0x7f0d005e;
+        public static final int define_materialstyleddialogs = 0x7f0d003f;
+        public static final int library_materialstyleddialogs_author = 0x7f0d004b;
+        public static final int library_materialstyleddialogs_authorWebsite = 0x7f0d004c;
+        public static final int library_materialstyleddialogs_isOpenSource = 0x7f0d004d;
+        public static final int library_materialstyleddialogs_libraryDescription = 0x7f0d004e;
+        public static final int library_materialstyleddialogs_libraryName = 0x7f0d004f;
+        public static final int library_materialstyleddialogs_libraryWebsite = 0x7f0d0050;
+        public static final int library_materialstyleddialogs_licenseId = 0x7f0d0051;
+        public static final int library_materialstyleddialogs_repositoryLink = 0x7f0d0052;
+        public static final int search_menu_title = 0x7f0d0064;
+        public static final int status_bar_notification_info_overflow = 0x7f0d0066;
     }
     public static final class style {
         private style() {}

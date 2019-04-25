@@ -29,6 +29,14 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
 import com.github.javiersantos.materialstyleddialogs.enums.Style;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -76,7 +84,8 @@ public class MainActivity extends AppCompatActivity implements
 
     // Used in checking for runtime permissions.
     private static final int REQUEST_PERMISSIONS_REQUEST_CODE = 34;
-
+    private FirebaseAnalytics mFirebaseAnalytics;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     // The BroadcastReceiver used to listen from broadcasts from the service.
     private MyReceiver myReceiver;
 
@@ -112,7 +121,8 @@ public class MainActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         myReceiver = new MyReceiver();
         setContentView(R.layout.activity_main);
-
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         if (Utils.requestingLocationUpdates(this)) {
             if (!checkPermissions()) {
                 requestPermissions();
@@ -170,6 +180,7 @@ public class MainActivity extends AppCompatActivity implements
 
     public static void sendTechLoc(String lat,String lng){
         apiInterface = APIClient.getClient().create(APIInterface.class);
+
         Call call = apiInterface.sendTechLoc("11",lat,lng);
         call.enqueue(new Callback() {
             @Override
@@ -311,6 +322,26 @@ public class MainActivity extends AppCompatActivity implements
                 Toast.makeText(MainActivity.this, Utils.getLocationText(location),
                         Toast.LENGTH_SHORT).show();
                 sendTechLoc(Utils.getLat(location),Utils.getLong(location));
+                // Create a new user with a first and last name
+                Map<String, Object> Loc = new HashMap<>();
+                Loc.put("lat", Utils.getLat(location));
+                Loc.put("lng", Utils.getLong(location));
+
+                // Add a new document with a generated ID
+                db.collection("location")
+                        .add(Loc)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error adding document", e);
+                            }
+                        });
 
             }
         }

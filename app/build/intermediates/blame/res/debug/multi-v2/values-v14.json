@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Daksh\\AndroidStudioProjects\\LocationServiceNotificationDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "outputFile": "D:\\AndroidStudioProjects\\LocationServiceNotificationDemo\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Daksh\\.gradle\\caches\\transforms-1\\files-1.1\\core-0.9.0.2.aar\\be8649e60252a0839f4e758a2e96da7a\\res\\values-v14\\values-v14.xml",
+                    "source": "C:\\Users\\Daksh\\.gradle\\caches\\transforms-2\\files-2.1\\1bb497341945af801837f42ec8dc7f7c\\res\\values-v14\\values-v14.xml",
                     "from": {
                         "startLines": "2,9",
                         "startColumns": "4,4",
